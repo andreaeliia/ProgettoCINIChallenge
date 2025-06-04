@@ -1,0 +1,11 @@
+{
+  "gpu_used": true,
+  "mixed_precision": true,
+  "final_results": {
+    "top_accuracy": 0.9877614378929138,
+    "medium_accuracy": 0.0,
+    "all_binary_accuracy": 0.0,
+    "all_precision": 0.0005930769257247448,
+    "all_recall": 0.0012729455484077334
+  }
+}

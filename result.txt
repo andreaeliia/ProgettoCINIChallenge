@@ -1,0 +1,74 @@
+🎵 Elaborazione: modello3/212.mp3
+==================================================
+📊 Audio loaded: 4537856 samples, 22050Hz, 205.80s
+🎵 Creating segments: 30.0s each, 50% overlap
+🎵 Extracted 12 segments with shape: (12, 128, 130, 1)
+✅ Features estratte con successo: (12, 128, 130, 1)
+🔄 Making predictions on 12 segments...
+
+📊 ANALISI COMPLETA CANZONE: 212.mp3
+================================================================================
+🎵 TOP LEVEL GENRES:
+   📊 Analisi 12 segmenti:
+      Segmento 1: Electronic (0.069)
+      Segmento 2: Electronic (0.069)
+      Segmento 3: Electronic (0.069)
+      Segmento 4: Electronic (0.069)
+      Segmento 5: Electronic (0.069)
+      Segmento 6: Electronic (0.069)
+      Segmento 7: Electronic (0.069)
+      Segmento 8: Electronic (0.069)
+      Segmento 9: Electronic (0.069)
+      Segmento 10: Electronic (0.069)
+      Segmento 11: Electronic (0.069)
+      Segmento 12: Electronic (0.069)
+
+   🗳️  VOTING: Electronic (12/12 segmenti)
+   🎯 CONFIDENCE: Electronic (avg: 0.069)
+   ⚖️  WEIGHTED: Electronic (score: 0.830)
+
+🎵 MEDIUM LEVEL GENRES:
+   🗳️  VOTING: Electronic (12/12 segmenti)
+   🎯 CONFIDENCE: Electronic (avg: 0.008)
+
+🎵 ALL GENRES (Multi-label):
+   🏆 Top 10 generi per probabilità media:
+      1. New Age: 0.489
+      2. Rap: 0.488
+      3. Radio Art: 0.488
+      4. Balkan: 0.488
+      5. Freak-Folk: 0.488
+      6. New Wave: 0.488
+      7. Jungle: 0.488
+      8. Hip-Hop: 0.488
+      9. Singer-Songwriter: 0.488
+      10. Funk: 0.487
+
+🎯 CONSENSUS FINALE:
+   🥇 Top Genre (Weighted): Electronic
+   🥈 Medium Genre (Voting): Electronic
+   🥉 Best Multi-label: New Ages
+
+
+
+
+
+         # Crea l'adapter appropriato
+        if task_type == TaskType.TEXT_CLASSIFICATION:
+            from dataset_by_tasking.text_classification import TextClassificationTask
+            return TextClassificationTask(config, teacher_model, student_model)
+            
+        elif task_type == TaskType.IMAGE_CLASSIFICATION:
+            from dataset_by_tasking.image_classification import ImageClassificationTask
+            return ImageClassificationTask(config, teacher_model, student_model)
+            
+        elif task_type == TaskType.TEXT_GENERATION:
+            from dataset_by_tasking.text_generation import TextGenerationTask
+            return TextGenerationTask(config, teacher_model, student_model)
+            
+        elif task_type == TaskType.TABULAR_CLASSIFICATION:
+            from dataset_by_tasking.tabular_classification import TabularClassificationTask
+            return TabularClassificationTask(config, teacher_model, student_model)
+            
+        else:
+            raise ValueError(f"Task type non supportato: {task_type.value}")
