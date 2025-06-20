@@ -1,0 +1,56 @@
+{
+  "dataset_info": {
+    "name": "FMA_Large_Existing",
+    "total_tracks": 24598,
+    "num_genres": 16,
+    "mean_per_genre": 1537.375,
+    "std_per_genre": 2548.8325660976634,
+    "imbalance_ratio": 2785.6666666666665,
+    "min_count": 3,
+    "max_count": 8357
+  },
+  "paths": {
+    "metadata_path": "fma_metadata",
+    "audio_path": "modello3/fma_large",
+    "tracks_csv": "fma_metadata/tracks.csv",
+    "genres_csv": "fma_metadata/genres.csv"
+  },
+  "class_weights": {
+    "Experimental": 0.183962546368314,
+    "Rock": 0.2171740358807741,
+    "Electronic": 0.5027387181164159,
+    "Hip-Hop": 1.1379533678756477,
+    "Folk": 1.197332554517134,
+    "Pop": 1.3415139616055847,
+    "Instrumental": 2.1088820301783264,
+    "Classical": 2.5161620294599016,
+    "International": 4.143867924528302,
+    "Spoken": 5.040573770491803,
+    "Jazz": 8.221256684491978,
+    "Old-Time / Historic": 34.94034090909091,
+    "Blues": 42.704861111111114,
+    "Soul-RnB": 73.20833333333333,
+    "Country": 96.0859375,
+    "Easy Listening": 512.4583333333334
+  },
+  "bilanciamento": {
+    "strategia": "class_weights + focal_loss + weighted_sampling",
+    "peso_minimo": 0.183962546368314,
+    "peso_massimo": 512.4583333333334,
+    "rapporto_pesi": 2785.666666666667
+  },
+  "training_config": {
+    "batch_size": 4,
+    "use_class_weights": true,
+    "use_weighted_sampling": true,
+    "use_focal_loss": true,
+    "oversample_threshold": 100,
+    "undersample_threshold": 4000
+  },
+  "setup_status": {
+    "dataset_found": true,
+    "metadata_analyzed": true,
+    "audio_available": true,
+    "ready_for_training": true
+  }
+}

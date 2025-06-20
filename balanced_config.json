@@ -1,0 +1,38 @@
+{
+  "dataset_info": {
+    "total_genres": 16,
+    "total_samples": 24598,
+    "mean_samples_per_genre": 1537.375,
+    "coefficient_of_variation": 1.6579120683617616
+  },
+  "class_weights": {
+    "Experimental": 0.183962546368314,
+    "Rock": 0.2171740358807741,
+    "Electronic": 0.5027387181164159,
+    "Hip-Hop": 1.1379533678756477,
+    "Folk": 1.197332554517134,
+    "Pop": 1.3415139616055847,
+    "Instrumental": 2.1088820301783264,
+    "Classical": 2.5161620294599016,
+    "International": 4.143867924528302,
+    "Spoken": 5.040573770491803,
+    "Jazz": 8.221256684491978,
+    "Old-Time / Historic": 34.94034090909091,
+    "Blues": 42.704861111111114,
+    "Soul-RnB": 73.20833333333333,
+    "Country": 96.0859375,
+    "Easy Listening": 512.4583333333334
+  },
+  "resampling_strategy": {
+    "max_samples_per_class": 4086,
+    "min_samples_per_class": 100,
+    "oversample_threshold": 100,
+    "undersample_threshold": 4086
+  },
+  "training_recommendations": {
+    "use_class_weights": true,
+    "use_weighted_sampling": true,
+    "focal_loss_recommended": true,
+    "batch_balancing_recommended": true
+  }
+}
